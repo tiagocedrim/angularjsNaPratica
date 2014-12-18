@@ -1,0 +1,16 @@
+{
+  "name": "faceKoob",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tiagocedrim/faceKoob",
+  "authors": [
+    "Tiago Cedrim <tiagocedrim@nyxk.com.br>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

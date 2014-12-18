@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>FaceKoob</title>
+
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+
+</head>
+
+<body ng-app="faceKoobApp">
+<h1 class="text-center">FaceKoob
+    <small>No secrets on facebook</small>
+</h1>
+
+<div class="container-fluid" ng-controller="BreakLink as breakLink ">
+    <div class="row">
+
+        <div class="col-md-5 col-md-offset-3">
+            <input type="text"
+                   class="form-control input-hg"
+                   placeholder="Insert link here"
+                   ng-model="breakLink.link"/>
+        </div>
+
+        <div class="col-md-1">
+            <button class="btn btn-hg btn-primary" ng-click="breakLink.getLink()">
+                Break Link
+            </button>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3>Link:</h3>
+            <a href="http://facebook.com/tiagocedrim">Facebook: {{breakLink.link}}</a>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- * scripts * -->
+
+<!-- Libs -->
+<script src="bower_components/angular/angular.min.js"></script>
+
+<!-- Aplication-->
+<script src="app/app.js"></script>
+
+<!-- Break Link -->
+<script src="app/breakLink/breakLink.module.js"></script>
+<script src="app/breakLink/breakLink.controller.js"></script>
+
+</body>
+</html>
