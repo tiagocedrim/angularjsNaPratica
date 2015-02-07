@@ -2,6 +2,6 @@
 
 ## O que é?
 
-**FaceKoob** consegue mostrar o usuário de quem publicou uma foto, com o link direto para uma foto do *Facebook*
+**AngularJS na prática** guia prático para a galera do GDG Maceió.
 
 
