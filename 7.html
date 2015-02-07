@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>GDG</title>
+
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body ng-app="gdgApp">
+
+
+<div class="container" ng-controller="ListaController">
+    <h1 class="text-center">GDG - AngularJS
+        <small>Na Prática</small>
+    </h1>
+    <div class="row">
+        <span class="pull-left"><a href="5.html"><<6: ng-repeat</a></span>
+    </div>
+    <h3>7: Juntando Tudo</h3>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12 column well">
+            <div class="col-md-6 column">
+                <label>Nome do Jogo</label>
+                <input class="form-control" type="text" name="name" ng-model="novoJogo.nome"/>
+            </div>
+            <div class="col-md-6 column">
+                <label>Preço</label>
+                <input class="form-control" type="text" name="name" ng-model="novoJogo.preco"/>
+                <input type="hidden" ng-model="novoJogo.id">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 column">
+            <button class="btn btn-primary" ng-click="salvar()">Salvar Jogo</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12 column">
+            <label>Buscar</label>
+            <input class="form-control" placeholder="ex. Fifa 15" ng-model="busca"/>
+            <br/>
+
+            <label>Meus jogos PS4</label>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Jogo PS4</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <br/>
+                <tbody>
+                <tr ng-repeat="jogo in jogos | orderBy: 'nome' | filter: busca ">
+                    <td>{{jogo.nome}}</td>
+                    <td>{{jogo.preco | currency : 'R$ '}}</td>
+                    <th>
+                        <button class="btn btn-primary fui-new" ng-click="editar(jogo.id)"> Editar</button>
+                        <button class="btn btn-primary fui-cross-circle" ng-click="deletar(jogo.id)"> Deletar</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- * scripts * -->
+
+<!-- Libs -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app/gdg/gdg.controller.js"></script>
+</body>
+</html>
