@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>GDG</title>
+
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body ng-app="gdgApp">
+
+
+<div class="container" ng-controller="ListaController">
+    <h1 class="text-center">GDG - AngularJS
+        <small>Na Prática</small>
+    </h1>
+    <div class="row">
+        <span class="pull-left"><a href="5.html"><<5: ng-click</a></span>
+        <span class="pull-right"><a href="7.html">7: Juntando Tudo >></a></span>
+    </div>
+    <h3>6: ng-repeat</h3>
+    <hr>
+
+
+    <div class="row">
+        <div class="col-md-12 column">
+            <label>Buscar</label>
+            <input class="form-control" placeholder="ex. Fifa 15" ng-model="busca"/>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Jogo PS4</th>
+                    <th>Preço</th>
+                </tr>
+                </thead>
+                <br/>
+                <tbody>
+                <tr ng-repeat="jogo in jogos | orderBy: 'nome' | filter: busca ">
+                    <td>{{jogo.nome}}</td>
+                    <td>{{jogo.preco | currency : 'R$ '}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- * scripts * -->
+
+<!-- Libs -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app/gdg/gdg.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>GDG</title>
+
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body ng-app="gdgApp">
+
+
+<div class="container">
+    <h1 class="text-center">GDG - AngularJS
+        <small>Na Prática</small>
+    </h1>
+    <div class="row">
+        <span class="pull-left"><a href="3.html"><< 3: ng-class</a></span>
+        <span class="pull-right"><a href="5.html">5: ng-click >></a></span>
+    </div>
+    <h3>4: Controller</h3>
+    <hr>
+
+    <div class="row" ng-controller="Gdg4Controller">
+        <div class="col-md-12 column">
+            <div class="col-md-6 column">
+                <h4>Caps Lock </h4>
+                <input class="form-control" placeholder="ex. Tiago Cedrim" ng-model="seuNome"/>
+                <br/>
+
+                <div class="well">
+                    Você digitou : <strong>{{capsLock()}}</strong>
+                </div>
+
+            </div>
+            <div class="col-md-6 column">
+                <h4>Nome ao contrário</h4>
+                <input class="form-control" placeholder="ex. Tiago Cedrim" ng-model="nome"/>
+                <br/>
+
+                <div class="well">
+                    Você digitou  : <strong>{{contrario()}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- * scripts * -->
+
+<!-- Libs -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app/gdg/gdg.controller.js"></script>
+</body>
+</html>

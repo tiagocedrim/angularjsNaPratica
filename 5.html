@@ -10,37 +10,30 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 
-<body ng-app="">
+<body ng-app="gdgApp">
 
 
-<div class="container">
-    <h1 class="text-center">GDG - AngularJS <small>Na Prática</small></h1>
+<div class="container" ng-controller="Gdg5Controller">
+    <h1 class="text-center">GDG - AngularJS
+        <small>Na Prática</small>
+    </h1>
     <div class="row">
-        <span class="pull-left"><a href="1.html"></a></span>
-        <span class="pull-right"><a href="2.html">2: ng-model >></a></span>
+        <span class="pull-left"><a href="4.html"><<4: Controller</a></span>
+        <span class="pull-right"><a href="6.html">6: ng-repeat >></a></span>
     </div>
-    <h3>1: Data binding</h3>
+    <h3>5: ng-click</h3>
     <hr>
 
     <div class="row">
         <div class="col-md-12 column">
-            <div class="col-md-6 column">
-
-                <h4>Data binding com strings</h4>
-                <p>{{'Hello World'}}</p>
-                <p>{{'Posso ' + 'Concatenar'}}</p>
-
+            <div>
+                <img style="-webkit-transform: rotate({{angle}}deg); width: 300px; height: 300px" src="img/angularjs.png">
             </div>
-            <div class="col-md-6 column">
-
-                <h4>Data binding com números</h4>
-                <p>{{10 + 10}}</p>
-                <p>{{1 == 1}}</p>
-
-            </div>
+            <button class="fui-triangle-left-large" ng-click="volta()"></button>
+            <button class="fui-triangle-right-large" ng-click="vai()"></button>
         </div>
-
     </div>
+</div>
 </div>
 
 
@@ -48,5 +41,6 @@
 
 <!-- Libs -->
 <script src="bower_components/angular/angular.min.js"></script>
+<script src="app/gdg/gdg.controller.js"></script>
 </body>
 </html>

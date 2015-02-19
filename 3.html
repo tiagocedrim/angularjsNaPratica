@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>GDG</title>
+
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body ng-app="">
+
+
+<div class="container">
+    <h1 class="text-center">GDG - AngularJS
+        <small>Na Prática</small>
+    </h1>
+    <div class="row">
+        <span class="pull-left"><a href="2.html"><< 2: ng-model</a></span>
+        <span class="pull-right"><a href="4.html">4: Controller >></a></span>
+    </div>
+    <h3>3: ng-class, ng-show e ng-hide</h3>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12 column">
+            <div class="col-md-6 column">
+                <form>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="erro">
+                            Alguma coisa está errada! (adiciona a classe <code>.text-danger</code>)
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="pulsa">
+                            Pulsar (adiciona a classe <code>.pulsa</code>)
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="inverte">
+                            Colocar de cabeça para baixo (adiciona a classe <code>.cabeca_pra_baixo</code>)
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="escondeMostra">
+                            <span ng-hide="escondeMostra">Você está lendo meu nome...</span>
+                            <span ng-show="escondeMostra">E agora não!</span>
+
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 column">
+                <div ng-hide="escondeMostra" class="jumbotron text-center">
+                    <h2  ng-class="{ 'text-danger': erro, 'pulsa': pulsa, 'cabeca_pra_baixo': inverte }">
+                        Tiago Cedrim
+                    </h2>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- * scripts * -->
+
+<!-- Libs -->
+<script src="bower_components/angular/angular.min.js"></script>
+</body>
+</html>
