@@ -10,12 +10,12 @@
             $scope.nome = "";
 
             $scope.contrario = function () {
-                return $scope.nome.split("").reverse().join("")
-            }
+                return $scope.nome.split("").reverse().join("");
+            };
 
             $scope.capsLock = function () {
                 return $scope.seuNome.toUpperCase();
-            }
+            };
 
 
         }])
@@ -29,13 +29,13 @@
                 while ($scope.angle >= 360) {
                     $scope.angle -= 360;
                 }
-            }
+            };
             $scope.volta = function () {
                 $scope.angle -= 30;
                 while ($scope.angle < 0) {
                     $scope.angle += 360;
                 }
-            }
+            };
 
         }])
 
@@ -79,13 +79,13 @@
                     'preco': '137'
                 }
 
-            ]
+            ];
 
             var nId = 7;
 
             $scope.salvar = function() {
 
-                if($scope.novoJogo.id == null) {
+                if($scope.novoJogo.id === null) {
                     //Se for um novo jogo, adiciona ele na nossa lista de jogos
                     $scope.novoJogo.id = nId++;
                     $scope.jogos.push($scope.novoJogo);
@@ -100,7 +100,7 @@
 
                 //Limpa nossa lista de novoJogo
                 $scope.novoJogo = {};
-            }
+            };
 
             $scope.editar = function(id) {
                 //Procura o ID do jogo passado no parametro e deleta.
@@ -110,7 +110,7 @@
                         $scope.novoJogo = angular.copy($scope.jogos[i]);
                     }
                 }
-            }
+            };
 
 
             $scope.deletar = function (id) {
@@ -121,7 +121,7 @@
                         $scope.novoJogo = {};
                     }
                 }
-            }
+            };
 
         }]);
 
