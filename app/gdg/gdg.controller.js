@@ -85,7 +85,7 @@
 
             $scope.salvar = function() {
 
-                if($scope.novoJogo.id === null) {
+                if($scope.novoJogo.id == null) {
                     //Se for um novo jogo, adiciona ele na nossa lista de jogos
                     $scope.novoJogo.id = nId++;
                     $scope.jogos.push($scope.novoJogo);
