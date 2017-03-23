@@ -1,9 +1,9 @@
-#AngularJS na Prática
-##Do básico, ao infinito e além!!
+# AngularJS in practice
+## From basics, to infinity and beyond !!
 ### [Demo](http://tiagocedrim.github.io/angularjsNaPratica/)
 ### [Slide do projeto no SlideShare](http://pt.slideshare.net/tiagocedrim/angular-js-napratica)
 
-**AngularJS na prática** guia prático para quem quer dar início ao aprendizado em AngularJS. Com uma styleguide bem didática, você vai ter facilidade de entender os conceitos básicos dessa ferramenta fantástica.
+**AngularJS in practice** Practical guide for those who want to start learning AngularJS. With a well-designed styleguide, you will be able to understand the basics of this fantastic tool.
 
 
 
